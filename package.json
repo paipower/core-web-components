@@ -1,0 +1,34 @@
+{
+  "name": "pai-core-web-components",
+  "version": "0.0.43",
+  "description": "Pai Core Web Components",
+  "main": "dist/index.cjs.js",
+  "module": "dist/pai-core-web-components/pai-core-web-components.esm",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build --dev --docs",
+    "build:prod": "stencil build --docs",
+    "start": "stencil build --dev --watch --serve",
+    "build:dev": "stencil build --dev",
+    "build:dev:watch": "stencil build --dev --watch",
+    "run:dev": "dotnet run",
+    "test": "stencil test --spec --e2e",
+    "pack": "npm version patch && npm run build:prod && npm pack"
+  },
+  "dependencies": {
+    "@stencil/core": "^2.0.1",
+    "@types/react": "^17.0.35"
+  },
+  "devDependencies": {
+    "@stencil/react-output-target": "^0.0.9",
+    "@stencil/sass": "^1.4.1",
+    "@types/node": "^16.4.0",
+    "rollup-plugin-dotenv": "^0.3.0",
+    "typescript": "^4.3.5"
+  }
+}
